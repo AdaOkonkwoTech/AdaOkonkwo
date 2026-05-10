@@ -205,86 +205,39 @@
         <h1>Featured Projects</h1>
         <p>Explore some of my best work, showcasing how I turn complex problems into functional, scalable applications</p>
 
-        <!--project-category: web/software dev, data analysis, web scraping etc.(look up services). work-category: Commercial and Personal. -->
-        <div class="project-cards">
-            <div class="project-card">
-                <img src="./assets/projects/portfolio.PNG" alt="Portfolio project screenshot">
+        <!--project-category: web/software dev, data analysis, web scraping etc.(look up services). work-category: Commercial and Personal. 
+        tag: ["REST API", "Authentication", "Backend", "CRUD", "Real-time Chat", Dashboard, Automation, "Data Visualization", "Web Scraping", "E-Commerce", "AI Integration", "Custom GPT Agent", "Chatbot", "System Architecture", "Performance Optimization", "API Development", "Third-Party Integration", "Data Analysis", "Data Visualization", "Web Scraping", "E-Commerce Development", "AI & Bot Development"]
+        category: Personal, Client Work, Freelance, Open Source, Academic
+        -->
+        <span class="search-bar">
+            <input type="text" id="search-input" placeholder="Search projects...">
+            <button title="button" id="search-button">
+                <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#EB5204" stroke-width="1.392" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </button>
+        </span>
+        <div class="project-filter" id="filter-buttons"></div>
+        <div class="project-cards" id="project-grid"></div>
 
-                <div class="info">
-                    <span class="category"><small>Personal</small></span>
-                    <span class="title">My Porfolio</span>
-                </div>
-
-                <div class="overlay">
-                    <a href="#" class="visit-link" title="Project link" target="_blank" rel="noopener noreferrer">
-                        <svg fill="#0c141a" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 405.24 405.24" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M249.037,330.626H28.283V86.909h335.623v181.629l28.283,28.283V26.195c0-12.996-10.573-23.569-23.568-23.569H23.568 C10.573,2.626,0,13.199,0,26.195v309.146c0,12.995,10.573,23.568,23.568,23.568h238.911 C249.37,340.274,249.037,330.626,249.037,330.626z M338.026,42.202c0-4.806,3.896-8.702,8.702-8.702h8.701 c4.807,0,8.702,3.896,8.702,8.702v9.863c0,4.806-3.896,8.702-8.702,8.702h-8.701c-4.808,0-8.702-3.896-8.702-8.702V42.202z M297.561,42.202c0-4.806,3.896-8.702,8.701-8.702h8.703c4.808,0,8.702,3.896,8.702,8.702v9.863c0,4.806-3.896,8.702-8.702,8.702 h-8.703c-4.806,0-8.701-3.896-8.701-8.702V42.202z M257.095,42.202c0-4.806,3.897-8.702,8.702-8.702h8.702 c4.807,0,8.703,3.896,8.703,8.702v9.863c0,4.806-3.896,8.702-8.703,8.702h-8.702c-4.805,0-8.702-3.896-8.702-8.702V42.202z"></path> <path d="M392.606,322.19l-41.165-41.166c-9.292-9.291-21.797-13.446-33.972-12.487c0.958-12.175-3.196-24.679-12.487-33.972 l-41.165-41.165c-16.848-16.846-44.256-16.845-61.103,0l-6.689,6.688c-16.846,16.845-16.846,44.255,0,61.102l41.166,41.164 c9.293,9.293,21.797,13.446,33.971,12.489c-0.958,12.174,3.197,24.679,12.489,33.972l41.165,41.164 c16.845,16.846,44.255,16.846,61.101,0l6.688-6.688C409.452,366.445,409.452,339.035,392.606,322.19z M262.267,274.187 l17.062,17.063c-8.687,5.173-20.118,4.027-27.586-3.439l-41.166-41.166c-8.824-8.822-8.824-23.182,0-32.006l6.688-6.688 c8.823-8.824,23.182-8.824,32.004,0l41.166,41.165c7.47,7.469,8.613,18.898,3.439,27.587l-17.062-17.063 c-4.019-4.018-10.53-4.018-14.548,0C258.248,263.656,258.248,270.169,262.267,274.187z M378.058,368.743l-6.688,6.688 c-8.824,8.824-23.181,8.824-32.005,0.001L298.2,334.267c-7.468-7.469-8.614-18.898-3.44-27.586l17.063,17.062 c4.018,4.019,10.529,4.019,14.548,0c4.017-4.018,4.017-10.53,0-14.548l-17.063-17.063c8.688-5.174,20.118-4.027,27.589,3.44 l41.164,41.165C386.882,345.562,386.882,359.919,378.058,368.743z"></path> </g> </g> </g> </g></svg>
-                    </a>
-
-                    <a href="#" class="visit-link" title="Project overview" target="_blank">
-                        <svg fill="#000000" width="27px" height="27x" viewBox="0 0 24 24" id="page-break-2" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M20,5V8a1,1,0,0,1-1,1H5A1,1,0,0,1,4,8V4A2,2,0,0,1,6,2H17a1,1,0,0,1,.71.29l2,2A1,1,0,0,1,20,5ZM19,15H5a1,1,0,0,0-1,1v4a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V16A1,1,0,0,0,19,15Z" style="fill: #000000;"></path><path id="secondary" d="M21,13H17a1,1,0,0,1,0-2h4a1,1,0,0,1,0,2Zm-8,0H11a1,1,0,0,1,0-2h2a1,1,0,0,1,0,2ZM7,13H3a1,1,0,0,1,0-2H7a1,1,0,0,1,0,2ZM17,4a1,1,0,0,0,1,1h2a1,1,0,0,0-.28-.71l-2-2A1,1,0,0,0,17,2Z" style="fill: #FFB400;"></path></g></svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="./assets/projects/server.PNG" alt="Search server">
-
-                <div class="info">
-                    <span class="category"><small>Personal</small></span>
-                    <span class="title">Search server</span>
-                </div>
-
-                <div class="overlay">
-                    <a href="https://github.com/AdaOkonkwoTech/Search_Server_Project.git" class="visit-link" title="Project link" target="_blank" rel="noopener noreferrer">
-                        <svg fill="#0c141a" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 405.24 405.24" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M249.037,330.626H28.283V86.909h335.623v181.629l28.283,28.283V26.195c0-12.996-10.573-23.569-23.568-23.569H23.568 C10.573,2.626,0,13.199,0,26.195v309.146c0,12.995,10.573,23.568,23.568,23.568h238.911 C249.37,340.274,249.037,330.626,249.037,330.626z M338.026,42.202c0-4.806,3.896-8.702,8.702-8.702h8.701 c4.807,0,8.702,3.896,8.702,8.702v9.863c0,4.806-3.896,8.702-8.702,8.702h-8.701c-4.808,0-8.702-3.896-8.702-8.702V42.202z M297.561,42.202c0-4.806,3.896-8.702,8.701-8.702h8.703c4.808,0,8.702,3.896,8.702,8.702v9.863c0,4.806-3.896,8.702-8.702,8.702 h-8.703c-4.806,0-8.701-3.896-8.701-8.702V42.202z M257.095,42.202c0-4.806,3.897-8.702,8.702-8.702h8.702 c4.807,0,8.703,3.896,8.703,8.702v9.863c0,4.806-3.896,8.702-8.703,8.702h-8.702c-4.805,0-8.702-3.896-8.702-8.702V42.202z"></path> <path d="M392.606,322.19l-41.165-41.166c-9.292-9.291-21.797-13.446-33.972-12.487c0.958-12.175-3.196-24.679-12.487-33.972 l-41.165-41.165c-16.848-16.846-44.256-16.845-61.103,0l-6.689,6.688c-16.846,16.845-16.846,44.255,0,61.102l41.166,41.164 c9.293,9.293,21.797,13.446,33.971,12.489c-0.958,12.174,3.197,24.679,12.489,33.972l41.165,41.164 c16.845,16.846,44.255,16.846,61.101,0l6.688-6.688C409.452,366.445,409.452,339.035,392.606,322.19z M262.267,274.187 l17.062,17.063c-8.687,5.173-20.118,4.027-27.586-3.439l-41.166-41.166c-8.824-8.822-8.824-23.182,0-32.006l6.688-6.688 c8.823-8.824,23.182-8.824,32.004,0l41.166,41.165c7.47,7.469,8.613,18.898,3.439,27.587l-17.062-17.063 c-4.019-4.018-10.53-4.018-14.548,0C258.248,263.656,258.248,270.169,262.267,274.187z M378.058,368.743l-6.688,6.688 c-8.824,8.824-23.181,8.824-32.005,0.001L298.2,334.267c-7.468-7.469-8.614-18.898-3.44-27.586l17.063,17.062 c4.018,4.019,10.529,4.019,14.548,0c4.017-4.018,4.017-10.53,0-14.548l-17.063-17.063c8.688-5.174,20.118-4.027,27.589,3.44 l41.164,41.165C386.882,345.562,386.882,359.919,378.058,368.743z"></path> </g> </g> </g> </g></svg>
-                    </a>
-
-                    <a href="#" class="visit-link" title="Project overview" target="_blank">
-                        <svg fill="#000000" width="27px" height="27x" viewBox="0 0 24 24" id="page-break-2" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M20,5V8a1,1,0,0,1-1,1H5A1,1,0,0,1,4,8V4A2,2,0,0,1,6,2H17a1,1,0,0,1,.71.29l2,2A1,1,0,0,1,20,5ZM19,15H5a1,1,0,0,0-1,1v4a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V16A1,1,0,0,0,19,15Z" style="fill: #000000;"></path><path id="secondary" d="M21,13H17a1,1,0,0,1,0-2h4a1,1,0,0,1,0,2Zm-8,0H11a1,1,0,0,1,0-2h2a1,1,0,0,1,0,2ZM7,13H3a1,1,0,0,1,0-2H7a1,1,0,0,1,0,2ZM17,4a1,1,0,0,0,1,1h2a1,1,0,0,0-.28-.71l-2-2A1,1,0,0,0,17,2Z" style="fill: #FFB400;"></path></g></svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="./assets/projects/legitinktattoo.PNG" alt="Legit Ink Tattoo booking platform">
-
-                <div class="info">
-                    <span class="category"><small>Commercial</small></span>
-                    <span class="title">Tattoo Booking Platform</span>
-                </div>
-
-                <div class="overlay">
-                    <a href="https://legitinktattoo.vercel.app/" class="visit-link" title="Project link" target="_blank" rel="noopener noreferrer">
-                        <svg fill="#0c141a" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 405.24 405.24" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M249.037,330.626H28.283V86.909h335.623v181.629l28.283,28.283V26.195c0-12.996-10.573-23.569-23.568-23.569H23.568 C10.573,2.626,0,13.199,0,26.195v309.146c0,12.995,10.573,23.568,23.568,23.568h238.911 C249.37,340.274,249.037,330.626,249.037,330.626z M338.026,42.202c0-4.806,3.896-8.702,8.702-8.702h8.701 c4.807,0,8.702,3.896,8.702,8.702v9.863c0,4.806-3.896,8.702-8.702,8.702h-8.701c-4.808,0-8.702-3.896-8.702-8.702V42.202z M297.561,42.202c0-4.806,3.896-8.702,8.701-8.702h8.703c4.808,0,8.702,3.896,8.702,8.702v9.863c0,4.806-3.896,8.702-8.702,8.702 h-8.703c-4.806,0-8.701-3.896-8.701-8.702V42.202z M257.095,42.202c0-4.806,3.897-8.702,8.702-8.702h8.702 c4.807,0,8.703,3.896,8.703,8.702v9.863c0,4.806-3.896,8.702-8.703,8.702h-8.702c-4.805,0-8.702-3.896-8.702-8.702V42.202z"></path> <path d="M392.606,322.19l-41.165-41.166c-9.292-9.291-21.797-13.446-33.972-12.487c0.958-12.175-3.196-24.679-12.487-33.972 l-41.165-41.165c-16.848-16.846-44.256-16.845-61.103,0l-6.689,6.688c-16.846,16.845-16.846,44.255,0,61.102l41.166,41.164 c9.293,9.293,21.797,13.446,33.971,12.489c-0.958,12.174,3.197,24.679,12.489,33.972l41.165,41.164 c16.845,16.846,44.255,16.846,61.101,0l6.688-6.688C409.452,366.445,409.452,339.035,392.606,322.19z M262.267,274.187 l17.062,17.063c-8.687,5.173-20.118,4.027-27.586-3.439l-41.166-41.166c-8.824-8.822-8.824-23.182,0-32.006l6.688-6.688 c8.823-8.824,23.182-8.824,32.004,0l41.166,41.165c7.47,7.469,8.613,18.898,3.439,27.587l-17.062-17.063 c-4.019-4.018-10.53-4.018-14.548,0C258.248,263.656,258.248,270.169,262.267,274.187z M378.058,368.743l-6.688,6.688 c-8.824,8.824-23.181,8.824-32.005,0.001L298.2,334.267c-7.468-7.469-8.614-18.898-3.44-27.586l17.063,17.062 c4.018,4.019,10.529,4.019,14.548,0c4.017-4.018,4.017-10.53,0-14.548l-17.063-17.063c8.688-5.174,20.118-4.027,27.589,3.44 l41.164,41.165C386.882,345.562,386.882,359.919,378.058,368.743z"></path> </g> </g> </g> </g></svg>
-                    </a>
-
-                    <a href="#" class="visit-link" title="Project overview" target="_blank">
-                        <svg fill="#000000" width="27px" height="27x" viewBox="0 0 24 24" id="page-break-2" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M20,5V8a1,1,0,0,1-1,1H5A1,1,0,0,1,4,8V4A2,2,0,0,1,6,2H17a1,1,0,0,1,.71.29l2,2A1,1,0,0,1,20,5ZM19,15H5a1,1,0,0,0-1,1v4a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V16A1,1,0,0,0,19,15Z" style="fill: #000000;"></path><path id="secondary" d="M21,13H17a1,1,0,0,1,0-2h4a1,1,0,0,1,0,2Zm-8,0H11a1,1,0,0,1,0-2h2a1,1,0,0,1,0,2ZM7,13H3a1,1,0,0,1,0-2H7a1,1,0,0,1,0,2ZM17,4a1,1,0,0,0,1,1h2a1,1,0,0,0-.28-.71l-2-2A1,1,0,0,0,17,2Z" style="fill: #FFB400;"></path></g></svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="./assets/projects/quiz.PNG" alt="Quiz app">
-
-                <div class="info">
-                    <span class="category"><small>Personal</small></span>
-                    <span class="title">Quiz App</span>
-                </div>
-
-                <div class="overlay">
-                    <a href="https://github.com/AdaOkonkwoTech/Quiz_Python.git" class="visit-link" title="Project link" target="_blank" rel="noopener noreferrer">
-                        <svg fill="#0c141a" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 405.24 405.24" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M249.037,330.626H28.283V86.909h335.623v181.629l28.283,28.283V26.195c0-12.996-10.573-23.569-23.568-23.569H23.568 C10.573,2.626,0,13.199,0,26.195v309.146c0,12.995,10.573,23.568,23.568,23.568h238.911 C249.37,340.274,249.037,330.626,249.037,330.626z M338.026,42.202c0-4.806,3.896-8.702,8.702-8.702h8.701 c4.807,0,8.702,3.896,8.702,8.702v9.863c0,4.806-3.896,8.702-8.702,8.702h-8.701c-4.808,0-8.702-3.896-8.702-8.702V42.202z M297.561,42.202c0-4.806,3.896-8.702,8.701-8.702h8.703c4.808,0,8.702,3.896,8.702,8.702v9.863c0,4.806-3.896,8.702-8.702,8.702 h-8.703c-4.806,0-8.701-3.896-8.701-8.702V42.202z M257.095,42.202c0-4.806,3.897-8.702,8.702-8.702h8.702 c4.807,0,8.703,3.896,8.703,8.702v9.863c0,4.806-3.896,8.702-8.703,8.702h-8.702c-4.805,0-8.702-3.896-8.702-8.702V42.202z"></path> <path d="M392.606,322.19l-41.165-41.166c-9.292-9.291-21.797-13.446-33.972-12.487c0.958-12.175-3.196-24.679-12.487-33.972 l-41.165-41.165c-16.848-16.846-44.256-16.845-61.103,0l-6.689,6.688c-16.846,16.845-16.846,44.255,0,61.102l41.166,41.164 c9.293,9.293,21.797,13.446,33.971,12.489c-0.958,12.174,3.197,24.679,12.489,33.972l41.165,41.164 c16.845,16.846,44.255,16.846,61.101,0l6.688-6.688C409.452,366.445,409.452,339.035,392.606,322.19z M262.267,274.187 l17.062,17.063c-8.687,5.173-20.118,4.027-27.586-3.439l-41.166-41.166c-8.824-8.822-8.824-23.182,0-32.006l6.688-6.688 c8.823-8.824,23.182-8.824,32.004,0l41.166,41.165c7.47,7.469,8.613,18.898,3.439,27.587l-17.062-17.063 c-4.019-4.018-10.53-4.018-14.548,0C258.248,263.656,258.248,270.169,262.267,274.187z M378.058,368.743l-6.688,6.688 c-8.824,8.824-23.181,8.824-32.005,0.001L298.2,334.267c-7.468-7.469-8.614-18.898-3.44-27.586l17.063,17.062 c4.018,4.019,10.529,4.019,14.548,0c4.017-4.018,4.017-10.53,0-14.548l-17.063-17.063c8.688-5.174,20.118-4.027,27.589,3.44 l41.164,41.165C386.882,345.562,386.882,359.919,378.058,368.743z"></path> </g> </g> </g> </g></svg>
-                    </a>
-
-                    <a href="#" class="visit-link" title="Project overview" target="_blank">
-                        <svg fill="#000000" width="27px" height="27x" viewBox="0 0 24 24" id="page-break-2" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M20,5V8a1,1,0,0,1-1,1H5A1,1,0,0,1,4,8V4A2,2,0,0,1,6,2H17a1,1,0,0,1,.71.29l2,2A1,1,0,0,1,20,5ZM19,15H5a1,1,0,0,0-1,1v4a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V16A1,1,0,0,0,19,15Z" style="fill: #000000;"></path><path id="secondary" d="M21,13H17a1,1,0,0,1,0-2h4a1,1,0,0,1,0,2Zm-8,0H11a1,1,0,0,1,0-2h2a1,1,0,0,1,0,2ZM7,13H3a1,1,0,0,1,0-2H7a1,1,0,0,1,0,2ZM17,4a1,1,0,0,0,1,1h2a1,1,0,0,0-.28-.71l-2-2A1,1,0,0,0,17,2Z" style="fill: #FFB400;"></path></g></svg>
-                    </a>
-                </div>
+        <div class="project-modal" id="project-modal">
+            <div class="modal-content">
+                <span class="close-modal" id="close-modal">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.00191 9.41621C7.61138 9.02569 7.61138 8.39252 8.00191 8.002C8.39243 7.61147 9.0256 7.61147 9.41612 8.002L12.0057 10.5916L14.5896 8.00771C14.9801 7.61719 15.6133 7.61719 16.0038 8.00771C16.3943 8.39824 16.3943 9.0314 16.0038 9.42193L13.4199 12.0058L16.0039 14.5897C16.3944 14.9803 16.3944 15.6134 16.0039 16.004C15.6133 16.3945 14.9802 16.3945 14.5896 16.004L12.0057 13.42L9.42192 16.0038C9.03139 16.3943 8.39823 16.3943 8.00771 16.0038C7.61718 15.6133 7.61718 14.9801 8.00771 14.5896L10.5915 12.0058L8.00191 9.41621Z" fill="#007bff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H4C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4ZM21 4C21 3.44772 20.5523 3 20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4Z" fill="#007bff"></path> </g></svg>
+                </span>
+                
+                <div id="modal-body"></div>
             </div>
         </div>
 
-        <p><a href="./projects.html">All Project Display</a></p>
+        <a href="./projects.html" class="view-more-project">
+            View All Project
+            <svg width="14px" height="14px" viewBox="0 -6.5 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>right-arrow</title> <desc>Created with Sketch.</desc> <defs> <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1"> <stop stop-color="#1DD47F" offset="0%"> </stop> <stop stop-color="#0DA949" offset="100%"> </stop> </linearGradient> </defs> <g id="icons" stroke-width="0.49400000000000005" fill="none" fill-rule="evenodd"> <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-211.000000, -1910.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero"> <g id="4" transform="translate(50.000000, 1871.000000)"> <path d="M187.812138,39.5802109 L198.325224,50.0042713 L198.41312,50.0858421 C198.764883,50.4346574 198.96954,50.8946897 199,51.4382227 L198.998248,51.6209428 C198.97273,52.0514917 198.80819,52.4628128 198.48394,52.8313977 L198.36126,52.9580208 L187.812138,63.4197891 C187.031988,64.1934036 185.770571,64.1934036 184.990421,63.4197891 C184.205605,62.6415481 184.205605,61.3762573 184.990358,60.5980789 L192.274264,53.3739093 L162.99947,53.3746291 C161.897068,53.3746291 161,52.4850764 161,51.3835318 C161,50.2819872 161.897068,49.3924345 162.999445,49.3924345 L192.039203,49.3917152 L184.990421,42.4019837 C184.205605,41.6237427 184.205605,40.3584519 184.990421,39.5802109 C185.770571,38.8065964 187.031988,38.8065964 187.812138,39.5802109 Z" id="right-arrow"> </path> </g> </g> </g> </g></svg>
+        </a>
+        <div class="load-wrapper">
+            <button id="load-more-btn">
+                Load More
+                <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 4V20M7 20L3 16M7 20L11 16M15.6 20H19.4C19.9601 20 20.2401 20 20.454 19.891C20.6422 19.7951 20.7951 19.6422 20.891 19.454C21 19.2401 21 18.9601 21 18.4V14.6C21 14.0399 21 13.7599 20.891 13.546C20.7951 13.3578 20.6422 13.2049 20.454 13.109C20.2401 13 19.9601 13 19.4 13H15.6C15.0399 13 14.7599 13 14.546 13.109C14.3578 13.2049 14.2049 13.3578 14.109 13.546C14 13.7599 14 14.0399 14 14.6V18.4C14 18.9601 14 19.2401 14.109 19.454C14.2049 19.6422 14.3578 19.7951 14.546 19.891C14.7599 20 15.0399 20 15.6 20ZM15.6 9H17.4C17.9601 9 18.2401 9 18.454 8.89101C18.6422 8.79513 18.7951 8.64215 18.891 8.45399C19 8.24008 19 7.96005 19 7.4V5.6C19 5.03995 19 4.75992 18.891 4.54601C18.7951 4.35785 18.6422 4.20487 18.454 4.10899C18.2401 4 17.9601 4 17.4 4H15.6C15.0399 4 14.7599 4 14.546 4.10899C14.3578 4.20487 14.2049 4.35785 14.109 4.54601C14 4.75992 14 5.03995 14 5.6V7.4C14 7.96005 14 8.24008 14.109 8.45399C14.2049 8.64215 14.3578 8.79513 14.546 8.89101C14.7599 9 15.0399 9 15.6 9Z" stroke="#5A8100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </button>
+        </div>
     </div>
 
     <!-- Contact Section -->
@@ -301,7 +254,9 @@
                 <button type="submit">Talk To Ada</button>
             </form>
         </div>
-        <img src="./assets/8machine.jpg" alt="machine">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.441419644896!2d3.379205074769203!3d6.524379395331698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5bdbb9c8e7%3A0x9a7c8a9e5b8c8e7!2sLagos%20Island%20Lagos%20State%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
 
     <!-- About section -->
@@ -381,6 +336,7 @@
     
     <!-- Spline Viewer Script -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.6/build/spline-viewer.js"></script>
+    <script src="./js/script.js"></script>
    
 </body>
 </html>

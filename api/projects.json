@@ -1,0 +1,54 @@
+[
+  {
+    "id": "portfolio-website",
+    "title": "Portfolio Website",
+    "category": "Personal",
+    "technologies": ["HTML", "CSS", "JavaScript", "Python"],
+    "tags": ["Frontend", "Backend", "API Integration", "REST API", "Web Development"],
+    "image": "./assets/projects/portfolio.PNG",
+    "liveLink": "https://github.com/AdaOkonkwoTech/AdaOkonkwo.git",
+    "client": "Personal Project",
+    "date": "4-28-2026",
+    "description": "A personal portfolio website showcasing my projects, skills, and experience as a software developer. The website features a clean and modern design, with sections for about me, projects, skills, and contact information.",
+    "overviewLink": "project-overview.html?id=portfolio-website"
+  },
+  {
+    "id": "search-server",
+    "title": "Search Server",
+    "category": "Personal",
+    "technologies": ["Python", "FastAPI", "Docker"],
+    "tags": ["Backend", "API Development", "Socket Programming"],
+    "image": "./assets/projects/server.PNG",
+    "liveLink": "https://github.com/AdaOkonkwoTech/Search_Server.git",
+    "client": "Personal Project",
+    "date": "11-02-2026",
+    "description": "A search server built with Python and FastAPI, designed to provide efficient search functionality for web applications.",
+    "overviewLink": "project-overview.html?id=search-server"
+  },
+  {
+    "id": "legit-ink",
+    "title": "Tattoo Booking Platform",
+    "category": "Client Work",
+    "technologies": ["JavaScript", "HTML", "SASS", "FastAPI", "Python"],
+    "tags": ["Frontend", "Backend", "API Integration", "Web Development"],
+    "image": "./assets/projects/legitinktattoo.PNG",
+    "liveLink": "https://legitinktattoo.vercel.app/",
+    "client": "Legit Ink",
+    "date": "21-01-2025",
+    "description": "A web application for managing and displaying ink-related products and services.",
+    "overviewLink": "project-overview.html?id=legit-ink"
+  },
+  {
+    "id": "quiz-app",
+    "title": "Quiz App",
+    "category": "Academic",
+    "image": "./assets/projects/quiz.PNG",
+    "liveLink": "https://github.com/AdaOkonkwoTech/Quiz_Python.git",
+    "client": "Personal Project",
+    "date": "25-06-2025",
+    "technologies": ["Python", "HTML", "CSS", "JavaScript", "FastAPI", "SQLite", "Twilo"],
+    "tags": ["Frontend", "Backend", "Web Scraping", "API Integration", "Web Development"],
+    "description": "A Python-based quiz application that tests users' knowledge on various topics. It features a user-friendly interface, multiple-choice questions, and a scoring system to track progress.",
+    "overviewLink": "project-overview.html?id=quiz-app"
+  }  
+]
