@@ -14,6 +14,13 @@
 <body>
     <div class="layer-blur"></div>
     <!-- Navigation section -->
+     <div class="display-mode">
+        <button id="toggle-theme" title="Toggle theme">
+            <svg id="moon" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 15.5018C18.651 14.5223 17 12.2039 17 9.5C17 6.79774 18.6534 4.48062 21 3.5C20.2304 3.17906 19.3859 3 18.5 3C15.7977 3 13.4806 4.64899 12.5 6.9956M6.9 21C4.74609 21 3 19.2889 3 17.1781C3 15.4286 4.3 13.8125 6.25 13.5C6.86168 12.0617 8.30934 11 9.9978 11C12.1607 11 13.9285 12.6589 14.05 14.75C15.1978 15.2463 16 16.4645 16 17.7835C16 19.5599 14.5449 21 12.75 21L6.9 21Z" stroke="#EB5204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+            <svg id="sun" style="display: none;" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="#EB5204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </button>
+     </div>
     <div class="nav">
         <nav>
             <a href="#home">
@@ -26,7 +33,7 @@
                 <span>Services</span>
             </a>
         
-            <a href="./projects.html">
+            <a href="#projects">
                 <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="23px" height="23px" viewBox="0 0 400 400.00001" id="svg2" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="project.svg" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs id="defs4"></defs> <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="1.4" inkscape:cx="90.721604" inkscape:cy="166.49755" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" units="px" showguides="true" inkscape:guide-bbox="true" inkscape:window-width="1920" inkscape:window-height="1056" inkscape:window-x="0" inkscape:window-y="24" inkscape:window-maximized="1"> <sodipodi:guide position="200.71429,121.42857" orientation="1,0" id="guide23298"></sodipodi:guide> </sodipodi:namedview> <metadata id="metadata7"> <rdf:rdf> <cc:work rdf:about=""> <dc:format>image/svg+xml</dc:format> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:title></dc:title> </cc:work> </rdf:rdf> </metadata> <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-652.36216)"> <path style="opacity:1;fill:#5A8100;fill-opacity:1;stroke:none;stroke-width:25;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 237.4297,701.86214 0,40 -186,0 0,49.6914 -51.4297,0 0,211.30866 400,0 0,-300.00006 0,-1 -137.5703,0 z m 25,25 112.5703,0 0,251 -50,0 0,-185.42 -0.1621,0 0,-0.8886 -248.4082,0 0,-24.6914 186,0.9453 z" id="folder" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccccccccccccccccc"> <title id="title23866">folder</title> </path> </g> </g></svg>
                 <span>Projects</span>
             </a>
@@ -86,6 +93,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="context">
                 <h3>Turn Your Idea Into Reality</h3>
                 <form action="" method="post" class="glass-form">
@@ -205,9 +213,8 @@
         <h1>Featured Projects</h1>
         <p>Explore some of my best work, showcasing how I turn complex problems into functional, scalable applications</p>
 
-        <!--project-category: web/software dev, data analysis, web scraping etc.(look up services). work-category: Commercial and Personal. 
-        tag: ["REST API", "Authentication", "Backend", "CRUD", "Real-time Chat", Dashboard, Automation, "Data Visualization", "Web Scraping", "E-Commerce", "AI Integration", "Custom GPT Agent", "Chatbot", "System Architecture", "Performance Optimization", "API Development", "Third-Party Integration", "Data Analysis", "Data Visualization", "Web Scraping", "E-Commerce Development", "AI & Bot Development"]
-        category: Personal, Client Work, Freelance, Open Source, Academic
+        <!--project-category -> tag: ["REST API", "Authentication", "Backend", "CRUD", "Real-time Chat", Dashboard, Automation, "Data Visualization", "Web Scraping", "E-Commerce", "AI Integration", "Custom GPT Agent", "Chatbot", "System Architecture", "Performance Optimization", "API Development", "Third-Party Integration", "Data Analysis", "Data Visualization", "Web Scraping", "E-Commerce Development", "AI & Bot Development"]
+        work-type: Personal, Client Work, Freelance, Open Source, Academic
         -->
         <span class="search-bar">
             <input type="text" id="search-input" placeholder="Search projects...">
@@ -221,10 +228,25 @@
         <div class="project-modal" id="project-modal">
             <div class="modal-content">
                 <span class="close-modal" id="close-modal">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.00191 9.41621C7.61138 9.02569 7.61138 8.39252 8.00191 8.002C8.39243 7.61147 9.0256 7.61147 9.41612 8.002L12.0057 10.5916L14.5896 8.00771C14.9801 7.61719 15.6133 7.61719 16.0038 8.00771C16.3943 8.39824 16.3943 9.0314 16.0038 9.42193L13.4199 12.0058L16.0039 14.5897C16.3944 14.9803 16.3944 15.6134 16.0039 16.004C15.6133 16.3945 14.9802 16.3945 14.5896 16.004L12.0057 13.42L9.42192 16.0038C9.03139 16.3943 8.39823 16.3943 8.00771 16.0038C7.61718 15.6133 7.61718 14.9801 8.00771 14.5896L10.5915 12.0058L8.00191 9.41621Z" fill="#007bff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H4C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4ZM21 4C21 3.44772 20.5523 3 20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4Z" fill="#007bff"></path> </g></svg>
+                    <svg width="28px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.00191 9.41621C7.61138 9.02569 7.61138 8.39252 8.00191 8.002C8.39243 7.61147 9.0256 7.61147 9.41612 8.002L12.0057 10.5916L14.5896 8.00771C14.9801 7.61719 15.6133 7.61719 16.0038 8.00771C16.3943 8.39824 16.3943 9.0314 16.0038 9.42193L13.4199 12.0058L16.0039 14.5897C16.3944 14.9803 16.3944 15.6134 16.0039 16.004C15.6133 16.3945 14.9802 16.3945 14.5896 16.004L12.0057 13.42L9.42192 16.0038C9.03139 16.3943 8.39823 16.3943 8.00771 16.0038C7.61718 15.6133 7.61718 14.9801 8.00771 14.5896L10.5915 12.0058L8.00191 9.41621Z" fill="#d8cfbc35"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H4C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4ZM21 4C21 3.44772 20.5523 3 20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4Z" fill="#d8cfbc35"></path> </g></svg>
                 </span>
                 
                 <div id="modal-body"></div>
+
+                <!-- NAVIGATION BUTTONS -->
+                <div class="modal-navigation">
+                    <button class="project-nav-btn prev-project">
+                        <svg width="24px" height="24px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="10.24"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M659.2 917.333333l66.133333-66.133333L386.133333 512 725.333333 172.8 659.2 106.666667 256 512z" fill="#FFB400"></path></g></svg>
+                        
+                        Previous Project
+                    </button>
+                    <button class="project-nav-btn next-project">
+                        Next Project
+                         
+                        <svg width="24px" height="24px" viewBox="0 0 1024.00 1024.00" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="9.216"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M364.8 106.666667L298.666667 172.8 637.866667 512 298.666667 851.2l66.133333 66.133333L768 512z" fill="#FFB400"></path></g></svg>
+                    </button>
+                </div>
+
             </div>
         </div>
 
@@ -244,57 +266,35 @@
     <div class="contact-me">
         <div class="context">
             <h3>Turn Your Idea Into Reality</h3>
-            <form action="" method="post" class="glass-form">
-                <div class="input-group">
-                    <input type="text" name="First Name" placeholder="First Name" id="fname">        
-                    <input type="text" name="Last Name" placeholder="Last Name"  id="lname">
-                </div>
-                <input type="email" name="email" id="email" placeholder="Enter your email" required>
-                <textarea name="message" id="message" placeholder="Your message..." rows="8"></textarea>
-                <button type="submit">Talk To Ada</button>
-            </form>
-        </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.441419644896!2d3.379205074769203!3d6.524379395331698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5bdbb9c8e7%3A0x9a7c8a9e5b8c8e7!2sLagos%20Island%20Lagos%20State%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
+            <p>Let us bring your IDEA to life. Schedule an online consultation to discuss your project.</p>
 
-    <!-- About section -->
-    <div class="about-me">
-        <div>
-            <h2>About Me</h2>
-            <div class="personal-info">
+            <div class="work-hours">
                 <table>
+                    <caption>Studio Hours</caption>
                     <tr>
-                        <td><span>Name:</span></td>
-                        <td> Ada Okonkwo</td>
+                        <td>Monday - Friday</td>
+                        <td>9:00 AM - 5:00 PM</td>
                     </tr>
                     <tr>
-                        <td><span>Email:</span></td>
-                        <td> ada.b.okonkwo@gmail.com</td>
+                        <td>Saturday</td>
+                        <td>10:00 AM - 4:00 PM</td>
                     </tr>
                     <tr>
-                        <td><span>Nationality:</span></td>
-                        <td> Nigeria</td>
-                    </tr>
-                    <tr>
-                        <td><span>Language:</span></td>
-                        <td> English, Igbo</td>
-                    </tr>
-                    <tr>
-                        <td><span>Freelance:</span></td>
-                        <td> Available</td>
+                        <td>Sunday</td>
+                        <td>Closed</td>
                     </tr>
                 </table>
             </div>
+
+            <button>Start a Project</button>
         </div>
-        <div>
-            <p>I'm Ada I'm a Nigerian based Programmer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
-            <a href="./resume/AdaOkonkwoResume (1).pdf" download="AdaOkonkwoCV" class="download-cv">Download CV</a>
-        </div>
+        <!-- <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.441419644896!2d3.379205074769203!3d6.524379395331698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5bdbb9c8e7%3A0x9a7c8a9e5b8c8e7!2sLagos%20Island%20Lagos%20State%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> -->
     </div>
 
-    <!-- Testimonials Section -->
+    
+    <!-- Testimonials Section --
     <div class="testimonials">
         <h1>What Clients Say</h1>
         <div class="testimonial-cards">
@@ -314,22 +314,65 @@
                 <h3>- Mike Johnson, Founder of StartUpHub</h3>
             </div>
         </div>
-    </div>
-    
+    </div> -->
     <!-- Footer section -->
     <div class="footer">
         <footer>
             <section>
-                <ul>
-                    <li><a href="#"><img src="./assets/Icons8/icons8-github-logo-50.png" alt="Github"> <span>Github</span></a></li>
-                    <li><a href="#"><img src="./assets/Icons8/icons8-x-logo-50.png" alt="X"> <span>X</span></a></li>
-                    <li><a href="#"><img src="./assets/Icons8/icons8-facebook-50.png" alt="Facebook"> <span>Facebook</span></a></li>
-                    <li><a href="#"><img src="./assets/Icons8/icons8-instagram-logo-50.png" alt="Instagram"> <span>Instagram</span></a></li>
-                    <li><a href="#"><img src="./assets/Icons8/icons8-linkedin-50.png" alt="LinkedIn"> <span>LinkedIn</span></a></li>
-                    <li><a href="#"><img src="./assets/Icons8/icons8-youtube-logo-50.png" alt="YouTube"> <span>YouTube</span></a></li>
-                    <li><a href="#"><img src="./assets/Icons8/icons8-gmail-logo-50.png" alt="Gmail"> <span>Gmail</span></a></li>
-                </ul>
+                <div class="f1">
+                    <h2><span class="a">A</span><span class="d">D</span> Tech</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque quasi dolore ipsum perspiciatis reiciendis quam repudiandae inventore nemo, quis, alias eum ex amet quos? Ullam voluptas nobis tempore placeat?
+                    </p>
+
+                    
+                </div>
+
+                <div class="f3">
+                    <h3>Have a Question?</h3>
+                    <address>
+                        <section class="address-layer1">
+                            <span class="address-layer2">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke="#EB5204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> 
+                                +234 705 148 1343
+                            </span>
+                        </section>
+                        <section class="address-layer1">
+                            <span class="address-layer2">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16" stroke="#EB5204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                adtechnigeria@gmail.com
+                            </span>
+                        </section>
+                    </address>
+
+                    <span>
+                        <a href="#">
+                            <svg fill="#EB5204" width="23px" height="23px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z"></path> </g></svg>
+                        </a>
+                        <a href="#">
+                            <svg fill="#EB5204" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="23px" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="7935ec95c421cee6d86eb22ecd125aef"> <path style="display: inline; fill-rule: evenodd; clip-rule: evenodd;" d="M116.504,500.219V170.654H6.975v329.564H116.504 L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941 C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219 c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533 c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531 c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z"> </path> </g> </g></svg>
+                        </a>
+                        <a href="#">
+                            <svg width="23px" height="23px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.23336 4.69629C7.23336 2.96884 8.63335 1.56857 10.36 1.56857C11.3736 1.56857 12.183 2.04804 12.7254 2.74385C13.3079 2.62467 13.8557 2.40913 14.3513 2.11508C14.1559 2.72598 13.7424 3.2396 13.2033 3.56463C13.2038 3.56568 13.2042 3.56674 13.2047 3.56779C13.7334 3.50361 14.2364 3.36302 14.7048 3.15546L14.7037 3.15715C14.3667 3.66183 13.9431 4.10736 13.4561 4.47034C13.4823 4.64672 13.4956 4.82427 13.4956 5.00079C13.4956 8.6871 10.6873 12.9746 5.52122 12.9746C3.93906 12.9746 2.46544 12.511 1.22505 11.7152C0.992632 11.5661 0.925108 11.2568 1.07423 11.0244C1.0874 11.0038 1.10183 10.9846 1.11734 10.9666C1.20582 10.8202 1.37438 10.7309 1.5554 10.7522C2.47066 10.8601 3.38568 10.7485 4.19219 10.3962C3.39226 10.0434 2.77129 9.35975 2.50204 8.51974C2.45359 8.3686 2.48835 8.20311 2.59351 8.08422C2.59716 8.0801 2.60087 8.07606 2.60464 8.0721C1.96391 7.50819 1.55973 6.68208 1.55973 5.76143V5.72759C1.55973 5.56814 1.64411 5.42059 1.78155 5.33974C1.82671 5.31317 1.87537 5.29511 1.92532 5.28558C1.70549 4.86154 1.58116 4.37984 1.58116 3.86958C1.58116 3.40165 1.58384 2.81192 1.91332 2.28081C1.98718 2.16175 2.10758 2.08915 2.2364 2.07195C2.42588 2.01237 2.64087 2.06969 2.77406 2.23302C3.86536 3.57126 5.44066 4.49583 7.23366 4.73961L7.23336 4.69629ZM5.52122 11.9746C4.73387 11.9746 3.97781 11.8435 3.27248 11.6023C4.13012 11.4538 4.95307 11.1159 5.66218 10.5602C5.81211 10.4427 5.87182 10.2435 5.81126 10.0629C5.7507 9.88234 5.583 9.75943 5.39255 9.75607C4.68968 9.74366 4.06712 9.39716 3.67793 8.86845C3.86828 8.85306 4.05428 8.82039 4.23445 8.77167C4.43603 8.71716 4.57363 8.53114 4.56674 8.32243C4.55985 8.11372 4.41029 7.93718 4.20555 7.89607C3.42694 7.73977 2.79883 7.16764 2.56169 6.42174C2.76255 6.47025 2.97102 6.4991 3.18482 6.5061C3.38563 6.51267 3.56646 6.38533 3.62795 6.19405C3.68943 6.00277 3.61666 5.79391 3.44963 5.68224C2.86523 5.29155 2.48116 4.62464 2.48116 3.86958C2.48116 3.70213 2.48352 3.55268 2.49355 3.41719C3.85115 4.79913 5.70873 5.68931 7.77588 5.79338C7.93225 5.80126 8.08328 5.73543 8.18395 5.61553C8.28463 5.49562 8.32332 5.33548 8.28851 5.18284C8.25255 5.02517 8.23336 4.86284 8.23336 4.69629C8.23336 3.52085 9.18591 2.56857 10.36 2.56857C11.5943 2.56857 12.4956 3.71208 12.4956 5.00079C12.4956 8.25709 10.0202 11.9746 5.52122 11.9746Z" fill="#EB5204"></path> </g></svg>
+                        </a>
+                        <a href="#">
+                            <svg width="23px" height="23px" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="style-scope yt-icon" preserveAspectRatio="xMidYMid" style="display:block" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <linearGradient id="a"> <stop offset="0" style="stop-color:#000000;stop-opacity:1"></stop> <stop offset="1" style="stop-color:#000000;stop-opacity:0"></stop> </linearGradient> <linearGradient xlink:href="#a" id="b" x1="2.004" x2="21.998" y1="12" y2="12" gradientTransform="matrix(1.02105 0 0 1.00561 -.247 -.067)" gradientUnits="userSpaceOnUse"></linearGradient> </defs> <g class="style-scope yt-icon" style="fill:url(#b);fill-opacity:1;stroke-width:1.01331" transform="matrix(7.83738 0 0 6.96095 1.899 12.469)"> <path fill="red" d="M21.39 13.19v-.22c-.01-.86-.5-5-.78-5.74-.32-.85-.76-1.5-1.31-1.91-.9-.67-1.66-.82-2.6-.84h-.02c-.4 0-3.01.32-5.2.62-2.2.3-4.95.7-5.6.94-.9.33-1.62.77-2.19 1.33-1.05 1.04-1.18 2.11-1.04 3.51.1 1.09.69 5.37 1.02 6.35.45 1.32 1.33 2.12 2.47 2.24.28.03.55.05.82.05 1 0 1.8-.21 2.72-.46 1.45-.39 3.25-.87 6.97-.87h.11c.91 0 3.14-.2 4.16-2.07.52-1 .49-2.21.47-2.93z" class="style-scope yt-icon" style="fill:none;fill-opacity:1;stroke:#EB5204;stroke-width:1.62466;stroke-dasharray:none;stroke-opacity:1"></path> <path fill="#000000" d="M11.59 14.76c-.48.36-.8.45-1.01.45a.54.54 0 0 1-.3-.08c-.34-.18-.42-.61-.5-1.2l-.01-.1c-.04-.31-.26-2.1-.38-3.16l-.09-.73c-.04-.28-.1-.75.24-1 .32-.23.75-.09.96-.03.53.17 3.6 1.23 4.59 1.73.21.09.67.28.68.83.01.5-.38.74-.53.82z" class="style-scope yt-icon" style="fill:none;fill-opacity:1;stroke:#EB5204;stroke-width:1.62466;stroke-dasharray:none;stroke-opacity:1"></path> </g> </g></svg>
+                        </a>
+                    </span>
+                </div>
+
+                <div class="f2">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="./projects.html">Portfolio</a></li>
+                        <li><a href="./services.html">About</a></li>
+                        <li><a href="./services.html">Contact</a></li>
+                        <li><a href="./projects.html">Blog</a></li>
+                        
+                    </ul>
+                </div>
             </section>
+
             <section><p>© 2026 Ada Okonkwo. All rights reserved.</p></section>
         </footer>
     </div>

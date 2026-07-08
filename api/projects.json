@@ -1,54 +1,71 @@
 [
   {
-    "id": "portfolio-website",
+    "id": 4,
     "title": "Portfolio Website",
-    "category": "Personal",
-    "technologies": ["HTML", "CSS", "JavaScript", "Python"],
-    "tags": ["Frontend", "Backend", "API Integration", "REST API", "Web Development"],
-    "image": "./assets/projects/portfolio.PNG",
+    "workType": "Personal",
+    "stack": ["HTML", "CSS", "JavaScript", "Python"],
+    "category": ["API Integration", "REST API", "Web Development"],
+    "images": ["./assets/projects/portfolio.PNG", "./assets/projects/quiz.PNG", "./assets/projects/server.PNG"],
     "liveLink": "https://github.com/AdaOkonkwoTech/AdaOkonkwo.git",
-    "client": "Personal Project",
+    "client": "AD Tech",
     "date": "4-28-2026",
-    "description": "A personal portfolio website showcasing my projects, skills, and experience as a software developer. The website features a clean and modern design, with sections for about me, projects, skills, and contact information.",
-    "overviewLink": "project-overview.html?id=portfolio-website"
+    "description": {
+      "overview": "A personal portfolio website showcasing my projects, skills, and experience as a software developer. The website features a clean and modern design, with sections for about me, projects, skills, and contact information. The frontend is built using HTML, CSS, and JavaScript, while the backend is powered by Python and FastAPI to handle contact form submissions and serve project data. The website is fully responsive and optimized for performance, providing an engaging user experience across all devices.",
+      "challenge": "The challenge was building a responsive UI with smooth animations. Additionally, integrating the backend to handle contact form submissions and serve project data was complex.",
+      "solution": "Used modular components and optimized rendering. Implemented efficient API endpoints with FastAPI to ensure quick responses.",
+      "result": "Improved user engagement and performance. The portfolio effectively showcases my work and skills, leading to increased visibility and opportunities."
+    }
+    
   },
   {
-    "id": "search-server",
+    "id": 3,
     "title": "Search Server",
-    "category": "Personal",
-    "technologies": ["Python", "FastAPI", "Docker"],
-    "tags": ["Backend", "API Development", "Socket Programming"],
-    "image": "./assets/projects/server.PNG",
+    "workType": "Personal",
+    "stack": ["Python", "FastAPI", "Docker"],
+    "category": ["Backend", "API Development", "Socket Programming"],
+    "images": ["./assets/projects/server.PNG"],
     "liveLink": "https://github.com/AdaOkonkwoTech/Search_Server.git",
-    "client": "Personal Project",
+    "client": "AD Tech",
     "date": "11-02-2026",
-    "description": "A search server built with Python and FastAPI, designed to provide efficient search functionality for web applications.",
-    "overviewLink": "project-overview.html?id=search-server"
+    "description": {
+      "overview": "A search server built with Python and FastAPI, designed to provide efficient search functionality for web applications.",
+      "challenge": "",
+      "solution": "",
+      "result": ""
+    }
   },
   {
-    "id": "legit-ink",
+    "id": 2,
     "title": "Tattoo Booking Platform",
-    "category": "Client Work",
-    "technologies": ["JavaScript", "HTML", "SASS", "FastAPI", "Python"],
-    "tags": ["Frontend", "Backend", "API Integration", "Web Development"],
-    "image": "./assets/projects/legitinktattoo.PNG",
+    "workType": "Client",
+    "stack": ["JavaScript", "HTML", "SASS", "FastAPI", "Python"],
+    "category": ["API Integration", "Web Development"],
+    "images": ["./assets/projects/legitinktattoo.PNG"],
     "liveLink": "https://legitinktattoo.vercel.app/",
     "client": "Legit Ink",
     "date": "21-01-2025",
-    "description": "A web application for managing and displaying ink-related products and services.",
-    "overviewLink": "project-overview.html?id=legit-ink"
+    "description": {
+      "overview": "A web application for managing and displaying ink-related products and services.",
+      "challenge": "",
+      "solution": "",
+      "result": ""
+    }
   },
   {
-    "id": "quiz-app",
+    "id": 1,
     "title": "Quiz App",
-    "category": "Academic",
-    "image": "./assets/projects/quiz.PNG",
+    "workType": "Academic",
+    "images": ["./assets/projects/quiz.PNG"],
     "liveLink": "https://github.com/AdaOkonkwoTech/Quiz_Python.git",
-    "client": "Personal Project",
+    "client": "ALX",
     "date": "25-06-2025",
-    "technologies": ["Python", "HTML", "CSS", "JavaScript", "FastAPI", "SQLite", "Twilo"],
-    "tags": ["Frontend", "Backend", "Web Scraping", "API Integration", "Web Development"],
-    "description": "A Python-based quiz application that tests users' knowledge on various topics. It features a user-friendly interface, multiple-choice questions, and a scoring system to track progress.",
-    "overviewLink": "project-overview.html?id=quiz-app"
+    "stack": ["Python", "HTML", "CSS", "JavaScript", "FastAPI", "SQLite", "Twilo"],
+    "category": ["Web Scraping", "API Integration", "Web Development"],
+    "description": {
+      "overview": "A Python-based quiz application that tests users' knowledge on various topics. It features a user-friendly interface, multiple-choice questions, and a scoring system to track progress.",
+      "challenge": "",
+      "solution": "",
+      "result": ""
+    }
   }  
 ]
