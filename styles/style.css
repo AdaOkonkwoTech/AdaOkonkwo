@@ -5,6 +5,7 @@
     --background-color3: rgba(255, 255, 255, 0.05);
     --background-color4: rgba(255, 255, 255, 0.1);
     --background-color5: rgba(255, 255, 255, 0.2);
+    --background-color7: rgba(255, 255, 255, 0.5);
     
     --border: rgba(255, 255, 255, 0.5);
     --border1: rgba(255, 255, 255, 0.2);
@@ -53,8 +54,14 @@
 }
 html{
     scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scrollbar-color: #cdd5db rgba(255,255,255,0.06);
+}
+
+/* Use Firefox-specific scrollbar properties when supported; WebKit fallback provided below */
+@supports (scrollbar-width: thin) {
+    html{
+        scrollbar-width: thin;
+        scrollbar-color: #cdd5db rgba(255,255,255,0.06);
+    }
 }
 /* WIDTH */
 ::-webkit-scrollbar {
@@ -110,7 +117,7 @@ a:hover {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    background-color: var(--background-color3);
+    background-color: var(--background-color7);
     border-radius: 50%;
     padding: 10px;
     display: flex;
