@@ -344,20 +344,21 @@ document.addEventListener("DOMContentLoaded", () => {    /* Code for everything 
     });
 
     // Light and dark mode
-    const toggle = document.getElementById("toggle-theme");
+    const themeToggle = document.getElementById("toggle-theme");
     const lightTheme = document.getElementById("sun");
     const darkTheme = document.getElementById("moon");
 
-    toggle.addEventListener("click", () => {
+    if (localStorage.getItem("theme") === "dark"){
+        document.body.classList.add("dark-mode")
+    }
+
+    themeToggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
 
-        if (document.body.classList.contains("dark-mode")) {
-            lightTheme.style.display = "block";
-            darkTheme.style.display = "none";
-        }else{
-            darkTheme.style.display = "block";
-            lightTheme.style.display = "none";
-        }
+        localStorage.setItem(
+            "theme",
+            document.body.classList.contains("dark-mode") ? "dark" : "light"
+        )
     });
 
 });
