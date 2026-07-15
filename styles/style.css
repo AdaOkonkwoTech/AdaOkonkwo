@@ -77,6 +77,9 @@ html{
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: "Caladea", serif;
     font-size: 16px;
     line-height: 1.5;
@@ -256,6 +259,10 @@ a:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+main {
+    flex: 1;
 }
 
 .banner .animation-bg {
@@ -1213,9 +1220,10 @@ a:hover {
     }
     .projects .project-cards {
         column-count: 1;
+        width: 100%;
     }
     .projects .project-cards .project-card {
-        height: 350px;
+        min-height: 350px;
     }
     .projects .project-modal .modal-content #modal-body{
         grid-template-columns: 1fr;
