@@ -171,14 +171,30 @@ document.addEventListener("DOMContentLoaded", () => {    /* Code for everything 
     }
 
 
+    let currentProjectIndex = 0;
+
     function openModal(projectId) {
         document.body.style.overflow = "hidden"; // Prevent background scrolling when modal is open
 
         // Find exact project
-        const project = allProjects.find(p => p.id === projectId);
+        currentProjectIndex = allProjects.findIndex(p => p.id === projectId);
 
-        if (!project) return;
+        // If project not found
+        if (currentProjectIndex === -1) return;
 
+        const project = allProjects[currentProjectIndex];
+
+        // Sort related projects
+        const relatedProjects = allProjects.filter(
+            p => p.id !== project.id &&
+            p.category.some(c => project.category.includes(c))
+        ).slice(0, 3);
+
+        // Disable button at the begining or end of modal list 
+        prevModalBtn.disabled = currentProjectIndex === 0;
+        nextModalBtn.disabled = currentProjectIndex === allProjects.length - 1;
+
+        // Modal project content display
         modalBody.innerHTML = `
             <div class="modal-image-container">
 
@@ -261,8 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {    /* Code for everything 
 
             </div>
 
-            <div class="modal-content">
-                    ---- here ----
+            <div class="modal-aside">
                 <div>
                     <h3>Project Info</h3>
 
@@ -305,6 +320,21 @@ document.addEventListener("DOMContentLoaded", () => {    /* Code for everything 
 
                 <div class="related-projects">
                     <h3>Related Projects</h3>
+
+                    ${
+                        relatedProjects.length
+                        ? relatedProjects.map(item => `
+                            <div class="related-project" data-id="${item.id}">
+                                <img src="${item.images[0]}" alt="${item.title}">
+
+                                <div class="related-info">
+                                    <h5>${item.title}</h5>
+                                    <small>${item.category.join(".")}</small>
+                                </div>
+                            </div>
+                        `).join("")
+                        : `<p>No related projects.</p>`
+                    }
                 </div>
 
                 <div class="contact-card">
@@ -317,9 +347,32 @@ document.addEventListener("DOMContentLoaded", () => {    /* Code for everything 
 
         `;
 
+        // Related project - loads it into the same modal
+        document.querySelectorAll(".related-project").forEach(card => {
+            card.addEventListener("click", () => {
+                openModal(Number(card.dataset.id));
+            });
+        });
+
         modal.classList.add("show");
     }
 
+
+    // Navigation buttons for project modal
+    const prevModalBtn = document.querySelector(".prev-project");
+    const nextModalBtn = document.querySelector(".next-project");
+
+    prevModalBtn.addEventListener("click", () => {
+        if (currentProjectIndex > 0) {
+            openModal(allProjects[currentProjectIndex - 1].id);
+        }
+    });
+
+    nextModalBtn.addEventListener("click", () => {
+        if (currentProjectIndex < allProjects.length - 1) {
+            openModal(allProjects[currentProjectIndex + 1].id);
+        }
+    });
     // Close modal
     function closeProjectModal() {
         document.body.style.overflow = "auto"; // Restore background scrolling when modal is closed
