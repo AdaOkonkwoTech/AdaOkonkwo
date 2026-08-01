@@ -1,5 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {    /* Code for everything Project*/
+document.addEventListener("DOMContentLoaded", () => {    
+    //Code for everything Project
     alert("Welcome to my portfolio! Please note that this is a work in progress, and some features may not be fully functional yet. Thank you for your understanding and patience as I continue to improve the site.");
+
+    // Nav on scroll effect
+    window.addEventListener("scroll", () => {
+        document.querySelector(".nav")
+            .classList.toggle("scrolled", window.scrollY > 40);
+    });
+
+    const menuBtn = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("header nav");
+
+    menuBtn.addEventListener("click", () => {
+
+        nav.classList.toggle("show");
+
+        menuBtn.textContent =
+            nav.classList.contains("show")
+                ? "✕"
+                : "☰";
+
+    });
 
     const projectGrid = document.getElementById("project-grid");
     const filterButtons = document.getElementById("filter-buttons");
