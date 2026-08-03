@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {    
     //Code for everything Project
-    //alert("Welcome to my portfolio! Please note that this is a work in progress, and some features may not be fully functional yet. Thank you for your understanding and patience as I continue to improve the site.");
+    alert("Welcome to my portfolio! Please note that this is a work in progress, and some features may not be fully functional yet. Thank you for your understanding and patience as I continue to improve the site.");
 
     // Nav on scroll effect
     window.addEventListener("scroll", () => {
