@@ -225,7 +225,7 @@ a:hover {
 }
 @media (max-width: 768px) {
     .display-mode{
-        bottom: 40px;
+        bottom: 15%;
         right: 10px;
     }
 }
@@ -994,41 +994,323 @@ main {
 }
 
 
-@media(max-width:768px){
 
-.service-row,
-.service-row.left,
+
+
+@media (max-width:1024px){
+
+    .services{
+        padding:8rem 8%;
+    }
+
+    .service-circle{
+        width:150px;
+        height:150px;
+    }
+
+    .service-circle svg{
+        width:60px;
+        height:60px;
+    }
+
+    .service-text h2{
+        font-size:1.6rem;
+    }
+
+    .service-text p{
+        width:70%;
+        font-size:.95rem;
+    }
+
+    .service-row.left{
+        padding-right:3rem;
+    }
+
+    .service-row.right{
+        padding-left:3rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .services{
+
+        padding:6rem 1.5rem;
+
+    }
+
+    .service-row{
+
+        display:flex;
+        flex-direction:column;
+
+        border-radius:30px;
+
+        padding:2rem;
+
+        gap:2rem;
+
+        margin-top:2rem;
+
+        border:2px solid var(--accent);
+
+    }
+
+    .service-row.left,
+    .service-row.right{
+
+        padding:2rem;
+
+        border-left:2px solid var(--accent);
+        border-right:2px solid var(--accent);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .service-row::before,
+    .service-row::after,
+
+    .mask{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+.service-row.left{
+
+    position:relative;
+
+}
+
+.service-row.left::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:32px;
+
+    top:100%;
+
+    width:2px;
+
+    height:55px;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            var(--accent) 0 8px,
+            transparent 8px 16px
+        );
+
+}
+
+}
+
+@media (max-width:768px){
+
 .service-row.right{
 
-    padding:0 2rem 0 5rem;
-
-    flex-direction:row;
+    position:relative;
 
 }
 
-.service-row.right{
+.service-row.right::before{
 
-    flex-direction:row;
+    content:"";
+
+    position:absolute;
+
+    right:32px;
+
+    top:100%;
+
+    width:2px;
+
+    height:55px;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            var(--accent) 0 8px,
+            transparent 8px 16px
+        );
+
 }
 
-.service-text{
-
-    width:auto;
 }
 
-.services::before{
+@media (max-width:768px){
 
-    left:45px;
-}
-
-.service-row::before,
-.service-row::after{
+.service-row:last-child::before{
 
     display:none;
-}
 
 }
 
+}
+
+@media (max-width:768px){
+
+.service-row.left::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:26px;
+
+    bottom:-10px;
+
+    width:14px;
+    height:14px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+    box-shadow:0 0 15px var(--accent);
+
+}
+
+.service-row.right::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:26px;
+
+    bottom:-10px;
+
+    width:14px;
+    height:14px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+    box-shadow:0 0 15px var(--accent);
+
+}
+
+.service-row:last-child::after{
+
+    display:none;
+
+}
+
+}
+
+.service-row.left{
+
+    margin-right:2rem;
+
+}
+
+.service-row.right{
+
+    margin-left:2rem;
+
+}
+
+@media (max-width:768px){
+
+    .service-row{
+
+        flex-direction:column;
+
+    }
+
+}
+@media (max-width:768px){
+
+    .service-text,
+    .service-row.left .service-text{
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+    .service-text p{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+@media (max-width:768px){
+
+    .service-circle{
+
+        width:120px;
+        height:120px;
+
+    }
+
+    .service-circle svg{
+
+        width:55px;
+        height:55px;
+
+    }
+
+}
+@media (max-width:768px){
+
+    .service-text h2{
+
+        font-size:1.4rem;
+
+    }
+
+    .service-text h5{
+
+        font-size:.8rem;
+
+        margin:.5rem 0;
+
+    }
+
+    .service-text p{
+
+        font-size:.95rem;
+
+        line-height:1.7;
+
+    }
+
+}
+@media (max-width:768px){
+
+    .service-row.right{
+
+        flex-direction:column;
+
+    }
+
+}
+@media (max-width:768px){
+
+    .service-circle{
+
+        order:-1;
+
+    }
+
+}
 /* --- Num Styles --- *
 .services{
 
