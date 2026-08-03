@@ -202,7 +202,7 @@ a:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 900;
     background-color: var(--background-color7);
     border-radius: 50%;
     padding: 10px;
@@ -217,6 +217,11 @@ a:hover {
     padding: 0;
     border-radius: inherit;
     background-color: transparent;
+    z-index: 1000;
+}
+.light-mode .display-mode svg path{
+    fill: #4a5565;
+    stroke: #4a5565;
 }
 @media (max-width: 768px) {
     .display-mode{
@@ -530,7 +535,7 @@ main {
     padding: 2rem 4rem;
     border-radius: 2rem;
 }
-.light-mode.banner .bg1 {
+.light-mode .banner .bg1 {
     border: 7px solid var(--border-light);
 }
 .banner .bg1 .bg1-context {
@@ -751,7 +756,7 @@ main {
 
     pointer-events: none;
 }
-.light-mode.services{
+.light-mode .services{
     background:#fff;
 }
 .service-row{
@@ -770,8 +775,9 @@ main {
     0 0 16px rgba(255, 199, 44, .08);
 }
 
-.light-mode.service-row{
+.light-mode .service-row{
     border: 6px solid #00bfff;
+    box-shadow: none;
 }
 .service-row.left{
     padding-right:6rem;
@@ -793,7 +799,7 @@ main {
     height: 262px;
     background: var(--bg-primary);
 }
-.light-mode.service-row.left::before{
+.light-mode .service-row.left::before{
     top: -6px;
     right: 0;
     width: 43%;
@@ -803,14 +809,14 @@ main {
 .service-row.left:nth-child(3)::before{
     content: "";
     position: absolute;
-    top: -3.5px;
+    top: -3px;
     right: -8px;
     width: 20%;
     height: 244px;
     background: var(--bg-primary);
     border-radius: 50%;
 }
-.light-mode.service-row:nth-child(3)::before{
+.light-mode .service-row:nth-child(3)::before{
     right: 0;
     background: #fff;
 }
@@ -825,17 +831,18 @@ main {
     background: var(--bg-primary);
     border-radius: 50%;
 }
-.light-mode.service-row.right::before{
+.light-mode .service-row.right::before{
     left: 0;
     background: #fff;
 }
 .service-row.left:first-child .mask{
-    position:absolute;
     background: var(--bg-primary);
+    position:absolute;
     z-index:5;
 }
-.light-mode.service-row.left:first-child .mask{
+.light-mode .service-row.left:first-child .mask{
     background: #fff;
+    z-index:5;
 }
 .service-row.left:first-child .mask.top{
     top:-15px;
@@ -853,7 +860,7 @@ main {
     border-bottom-right-radius: 10px;
     background: var(--accent);
 }
-.light-mode.service-row.left:first-child .mask.middle{
+.light-mode .service-row.left:first-child .mask.middle{
     background: #00bfff;
 }
 .service-row.right:last-child .mask{
@@ -861,7 +868,7 @@ main {
     background: var(--bg-primary);
     z-index:15;
 }
-.light-mode.service-row.right:last-child .mask.middle{
+.light-mode .service-row.right:last-child .mask.middle{
     background: #fff;
 }
 .service-row.right:last-child .mask.bottom{
@@ -869,6 +876,9 @@ main {
     right:33%;
     width:56%;
     height:15px;
+}
+.light-mode .service-row.right:last-child .mask.bottom{
+    background: #fff;
 }
 .service-row.right:last-child .mask.middle{
     bottom:-6px;
@@ -879,7 +889,7 @@ main {
     border-bottom-left-radius: 10px;
     background: var(--accent);
 }
-.light-mode.service-row.right:last-child .mask.middle{
+.light-mode .service-row.right:last-child .mask.middle{
     background: #00bfff;
 }
 
@@ -908,7 +918,7 @@ main {
     z-index:5;
 }
 
-.light-mode.services-circle{
+.light-mode .service-row:nth-child(even) .service-circle{
     background:#fff;
     box-shadow:
         0 20px 40px rgba(0,0,0,.18),
@@ -924,7 +934,11 @@ main {
         0 0 20px rgba(255,199,44,.18),
         0 0 45px rgba(255,199,44,.08);
 }
-.light-mode.service-circle svg{
+.service-circle svg path{
+    color: #fff;
+}
+.light-mode .service-row:nth-child(2) .service-circle svg path,
+.light-mode .service-row:nth-child(4) .service-circle svg path{
     color: #4a5565;
 }
 .service-row.left .service-text{
@@ -949,7 +963,7 @@ main {
     text-transform: uppercase;
     margin-bottom:1rem;
 }
-.light-mode.service-text h5{
+.light-mode .service-text h5{
     color:#777;
 }
 .service-text p{
@@ -959,7 +973,7 @@ main {
     width:50%;
     color:rgba(255,255,255,.72);
 }
-.light-mode.service-text p{
+.light-mode .service-text p{
     color:#666;
 }
 
@@ -968,6 +982,9 @@ main {
 }
 .service-row:nth-child(2) .service-text h2 span{
     color: var(--glow2);
+}
+.light-mode .service-row:nth-child(2) .service-text h2 span{
+    color: var(--accent);
 }
 .service-row:nth-child(3) .service-text h2 span{
     color: var(--secondary);
@@ -1167,32 +1184,7 @@ main {
 
 }*/
 
-/* --- Services Styles --- 
-.services {
-    padding: 6rem 9rem;
-    position: relative;
-    background-color: var();
-    color: var(--text-color3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.dark-mode .services {
-    background-color: var(--background-color2-d);
-}
-.services::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    top: 0; / Half of the height to sit on the line /
-    left: 0;
-    border-radius: inherit;
-    background: radial-gradient(
-        960px circle at 0 0, rgba(106, 0, 255, 0.1), transparent 40%
-    );
-}
-.services .little-tag,
+
 .projects .little-tag {
     display: block;
     border-radius: 1rem;
@@ -1204,120 +1196,23 @@ main {
     align-items: center;
     gap: 4px;
 }
-.dark-mode .services .little-tag,
 .dark-mode .projects .little-tag {
     background-color: var(--little-tag-d);
 
 }
 
-.services h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: -15px;
-    color: var(--text-color4);
-}
-
-.services>p,
 .projects>p {
     font-size: 1rem;
     max-width: 38rem;
     margin-inline: auto;
     text-align: center;
 }
-.dark-mode .services .service-cards .service-card >p,
-.dark-mode .services>p,
 .dark-mode .projects>p {
     color: var(--text-color2-d);
 }
 
-.services .service-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 2.6rem;
-}
 
-.services .service-cards .service-card {
-    min-height: 260px;
-    border-radius: 1rem;
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /*background-color: #121c24c5;
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.4),
-        0 5px 15px rgba(0, 0, 0, 0.2);
-}
-.dark-mode .services .service-cards .service-card {
-    box-shadow:
-        0 5px 35px rgba(94, 93, 93, 0.1),
-        0 0px 15px rgba(46, 46, 46, 0.1);
-}
-.services .service-cards .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow:
-        0 25px 50px rgba(0, 0, 0, 0.6),
-        0 10px 20px rgba(0, 0, 0, 0.3);
-}
 
-.services .service-cards .service-card h2 {
-    margin: 1rem 0;
-    color: var(--text-color5);
-    font-size: 1.2rem;
-}
-
-.services .service-cards .service-card>span {
-    background-color: var(--border-color2);
-    display: block;
-    padding: 0.5rem;
-    height: 50px;
-    width: 50px;
-    border-radius: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.services .service-cards .service-card img {
-    width: 20rem;
-    height: 20rem;
-    border-radius: 1rem;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    object-fit: cover;
-}*/
-
-/* Responsive Services for Mobile */
-@media (max-width: 900px) {
-    .services {
-        padding: 6rem 2.5rem 6rem 6rem;
-    }
-    .services .service-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .services {
-        padding: 6rem;
-    }
-
-    .services .service-cards {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .services .service-cards .service-card{
-        height: 350px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-}
-@media (max-width: 568px) {
-    .services {
-        padding: 6rem 1.5rem;
-    }
-}
 
 /* --- Projects Styles --- */
 .projects {

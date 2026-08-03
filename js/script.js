@@ -4,10 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Nav on scroll effect
     window.addEventListener("scroll", () => {
-        document.querySelector(".nav")
+        document.querySelector("header")
             .classList.toggle("scrolled", window.scrollY > 40);
     });
 
+    const closeMenu = `
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="34" height="34" viewBox="0 0 24 24" style="color: rgb(74, 85, 101); opacity: 1; transform: rotate(0deg);"><path fill="currentColor" d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12L5.293 6.707a1 1 0 0 1 0-1.414"></path></svg>
+    `;
+    const openMenu =`
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="34" height="34" viewBox="0 0 24 24" style="color: rgb(74, 85, 101); opacity: 1; transform: rotate(0deg);"><path fill="currentColor" d="M2 6a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m0 6.032a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m1 5.033a1 1 0 1 0 0 2h18a1 1 0 0 0 0-2z"></path></svg>
+    `;
     const menuBtn = document.querySelector(".menu-toggle");
     const nav = document.querySelector("header nav");
 
@@ -17,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         menuBtn.textContent =
             nav.classList.contains("show")
-                ? "✕"
-                : "☰";
+                ? closeMenu
+                : openMenu;
 
     });
 
@@ -56,11 +62,14 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error fetching projects:", error));
 
 
-    // Button on-click load more project card
-    loadMoreBtn.addEventListener("click", () => {
-        projectCount += 10;
-        displayProjects(allProjects);
-    })
+    // Load More button (Projects page only) - load more project card
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener("click", () => {
+            projectCount += 10;
+            displayProjects(allProjects);
+        });
+    }
+
 
     // Function to display projects on the page
     function displayProjects(projects){
@@ -71,11 +80,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
 
-            loadMoreBtn.style.display = "none";
+            if (loadMoreBtn) {
+                loadMoreBtn.style.display = "none";
+            }
+
             return;
         }
 
-        const projectPagination = projects.slice(0, projectCount);
+        const projectPagination = loadMoreBtn
+        ? projects.slice(0, projectCount) // Projects page
+        : projects.slice(0, 6);           // Homepage
+
 
         projectGrid.innerHTML = projectPagination.map(project => `
             <div class="project-card">
@@ -98,7 +113,12 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `).join("");
 
-        loadMoreBtn.style.display = projectCount >= projects.length ? "none" : "inline-block";
+        if (loadMoreBtn) {
+        loadMoreBtn.style.display =
+            projectCount >= projects.length
+                ? "none"
+                : "inline-block";
+        }
 
         const cards = document.querySelectorAll(".project-card");
         // Add animation to the project cards when they are displayed
@@ -417,22 +437,41 @@ document.addEventListener("DOMContentLoaded", () => {
         openModal(projectId);
     });
 
-    // Light and dark mode
+    // Theme Toggle: Light and dark mode
     const themeToggle = document.getElementById("toggle-theme");
-    const lightTheme = document.getElementById("sun");
-    const darkTheme = document.getElementById("moon");
+    console.log(themeToggle);
+    const sunIcon = document.getElementById("sun");
+    const moonIcon = document.getElementById("moon");
 
-    if (localStorage.getItem("theme") === "dark"){
-        document.body.classList.add("dark-mode")
+    // Restore saved theme
+    if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
     }
 
+    updateThemeIcon();
+
     themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
+
+        document.body.classList.toggle("light-mode");
 
         localStorage.setItem(
             "theme",
-            document.body.classList.contains("dark-mode") ? "dark" : "light"
-        )
+            document.body.classList.contains("light-mode")
+                ? "light"
+                : "dark"
+        );
+
+        updateThemeIcon();
     });
+
+    function updateThemeIcon() {
+        const isLight = document.body.classList.contains("light-mode");
+
+        // Show moon in light mode (click to go dark)
+        moonIcon.style.display = isLight ? "block" : "none";
+
+        // Show sun in dark mode (click to go light)
+        sunIcon.style.display = isLight ? "none" : "block";
+    }
 
 });
