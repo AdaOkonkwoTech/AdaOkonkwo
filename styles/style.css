@@ -739,6 +739,167 @@ main {
 }
 
 /* ====== SERVICES =======*/
+.services-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-title {
+    position: relative;
+    padding: 8rem 15% 3rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Small label */
+
+.service-title > span {
+    display: inline-block;
+    margin-bottom: .8rem;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    position: relative;
+}
+
+
+/* Small lines beside WHAT I DO */
+
+.service-title > span::before,
+.service-title > span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 1px;
+    background: var(--accent);
+    box-shadow: 0 0 8px rgba(255, 199, 44, .4);
+}
+
+.service-title > span::before {
+    right: calc(100% + 15px);
+}
+
+.service-title > span::after {
+    left: calc(100% + 15px);
+}
+
+
+/* Main heading */
+.service-title h2 {
+    margin: 0;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: var(--text-primary);
+    text-shadow:
+        0 0 10px rgba(255, 199, 44, .08),
+        0 0 30px rgba(255, 199, 44, .04);
+}
+
+
+/* Accent on part of heading if you decide to add a span */
+.service-title h2 span {
+    color: var(--accent);
+}
+
+/* Description */
+
+.service-title p {
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, .6);
+}
+.service-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 2rem auto 0;
+    background: var(--accent);
+    border-radius: 10px;
+    box-shadow:
+        0 0 8px rgba(255, 199, 44, .6),
+        0 0 20px rgba(255, 199, 44, .2);
+}
+
+.light-mode .service-title {
+    background: #fff;
+}
+
+.light-mode .service-title h2 {
+    color: #252525;
+}
+
+.light-mode .service-title p {
+    color: #666;
+}
+
+.light-mode .service-title > span {
+    color: #00bfff;
+}
+
+.light-mode .service-title > span::before,
+.light-mode .service-title > span::after {
+    background: #00bfff;
+    box-shadow: none;
+}
+
+.light-mode .service-title::after {
+    background: #00bfff;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+
+    .service-title {
+        padding: 5rem 1.5rem 2rem;
+    }
+
+    .service-title > span {
+        font-size: .65rem;
+        letter-spacing: 3px;
+    }
+
+    .service-title > span::before,
+    .service-title > span::after {
+        width: 25px;
+    }
+
+    .service-title > span::before {
+        right: calc(100% + 10px);
+    }
+
+    .service-title > span::after {
+        left: calc(100% + 10px);
+    }
+
+    .service-title h2 {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+
+    .service-title p {
+        max-width: 90%;
+        font-size: .9rem;
+        line-height: 1.7;
+    }
+
+    .service-title::after {
+        width: 70px;
+        height: 2px;
+        margin-top: 1.5rem;
+    }
+}
+
+
 .services{
     position:relative;
     padding:10rem 15% 8rem 15%;
