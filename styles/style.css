@@ -1357,8 +1357,8 @@ main {
         display: block;
         position: absolute;
         top: 100%;          /* starts exactly below the card */
-        width: 25rem;
-        height: 7rem;
+        width: clamp(12rem, 65vw, 25rem);
+        height: clamp(7rem, 18vw, 7rem);
         pointer-events: none;
         z-index: 1;
     }
@@ -1374,7 +1374,7 @@ main {
     }
 
     .service-row.left .service-track{
-        left: -17px;         /* align with the left circle */
+        left: clamp(-13px, -3vw, -6px);         /* align with the left circle */
 
     }
    
