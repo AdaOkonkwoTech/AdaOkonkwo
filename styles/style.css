@@ -926,6 +926,7 @@ main {
 .light-mode .services{
     background:#fff;
 }
+
 .service-row{
     position:relative;
     width:100%;
@@ -1060,6 +1061,15 @@ main {
     background: #00bfff;
 }
 
+
+
+
+
+.service-track{
+    display: none;
+}
+
+
 .service-circle{
     width:200px;
     height:200px;
@@ -1169,7 +1179,7 @@ main {
     .services{
         padding:8rem 8%;
     }
-    
+
     .service-circle{
         width:150px;
         height:150px;
@@ -1221,8 +1231,10 @@ main {
         flex-direction: column;
         border: none;
         border-radius: 12px;
+        overflow: visible;   /* allow SVG outside the card */
+        z-index: 2;
     }
-
+    
     .light-mode .service-row{
         border: none;
        box-shadow:
@@ -1289,27 +1301,24 @@ main {
         content: none;
     }
 
-    /*------map track-------*/
+    /*------ Map track straight -------*/
     .service-row.left::after,
     .service-row.right::after {
         content: "";
         position: absolute;
-
         top: 100%;
-
         width: 4px;
         height: 7rem;
-
         background: repeating-linear-gradient(
             to bottom,
-            var(--accent-dark) 0px,
-            var(--accent-dark) 5px,
+            var(--border-light) 0px,
+            var(--border-light) 5px,
             transparent 5px,
             transparent 12px
         );
 
         transform-origin: top;
-        filter: drop-shadow(0 0 4px var(--accent));
+        filter: drop-shadow(0 0 4px var(--text-secondary));
         z-index: 10;
     }
 
@@ -1338,6 +1347,44 @@ main {
     .service-row:last-child::after {
         display: none;
     }
+
+    /*------------ Map track curve ----------*/
+    
+
+
+
+    .service-track{
+        display: block;
+        position: absolute;
+        top: 100%;          /* starts exactly below the card */
+        width: 25rem;
+        height: 7rem;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .service-track path{
+        fill: none;
+        stroke: var(--accent);
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 2 12;
+        filter: drop-shadow(0 0 4px var(--accent));
+    }
+
+    .service-row.left .service-track{
+        left: -17px;         /* align with the left circle */
+
+    }
+   
+    .service-row.right .service-track{
+        transform: scaleX(-1);
+        transform-origin: center;
+    }
+
+
+
 
 }
 
